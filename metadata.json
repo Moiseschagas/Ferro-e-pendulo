@@ -1,0 +1,6 @@
+{
+  "name": "Ferro & Pêndulo",
+  "description": "Jogo de plataforma 2D com física realista de massa, empuxo, torque pendular e sistema de inventário.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
