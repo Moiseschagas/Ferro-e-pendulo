@@ -188,23 +188,10 @@ export const LEVELS: LevelDefinition[] = [
       { id: 'c2_left_deck', x: 0, y: 580, w: 340, h: 280, surface: 'stone', friction: 0.85, restitution: 0.05 },
       // Basin floor
       { id: 'c2_basin_floor', x: 340, y: 810, w: 620, h: 60, surface: 'stone', friction: 0.85, restitution: 0.05 },
-      // Center deck
+      // Central wooden walkway across the water (x: 565..735)
+      { id: 'c2_water_walkway', x: 565, y: 582, w: 170, h: 20, surface: 'wood', friction: 0.78, restitution: 0.08 },
+      // Center deck (open opposite bank without floodgate)
       { id: 'c2_center_deck', x: 960, y: 580, w: 430, h: 280, surface: 'stone', friction: 0.85, restitution: 0.05 },
-      // Floodgate 1
-      {
-        id: 'c2_gate1',
-        x: 965,
-        y: 410,
-        w: 30,
-        h: 170,
-        surface: 'brass',
-        friction: 0.7,
-        restitution: 0.05,
-        gateId: 'c2_gate1',
-        gateTargetOffset: { x: 0, y: -155 },
-        gateProgress: 0,
-      },
-      { id: 'c2_gate1_cap', x: 940, y: 380, w: 80, h: 30, surface: 'stone', friction: 0.85, restitution: 0.05 },
       // Ricochet pit & slit wall
       { id: 'c2_pit_floor', x: 1390, y: 740, w: 280, h: 120, surface: 'stone', friction: 0.85, restitution: 0.05 },
       // Slit wall (leaves opening y: 470..530 for rubber sphere; player can vault over top with spring pad!)
@@ -243,18 +230,6 @@ export const LEVELS: LevelDefinition[] = [
       { id: 'c2_water', x: 340, y: 605, w: 620, h: 205, density: 1.0, wavePhase: 0 },
     ],
     pressurePlates: [
-      {
-        id: 'c2_plate1',
-        x: 610,
-        y: 798,
-        w: 90,
-        h: 12,
-        requiredMassKg: 50,
-        currentMassKg: 0,
-        pressed: false,
-        targetGateId: 'c2_gate1',
-        depression: 0,
-      },
       {
         id: 'c2_plate2',
         x: 1500,
@@ -319,7 +294,7 @@ export const LEVELS: LevelDefinition[] = [
     ],
     portal: { x: 1920, y: 490, w: 56, h: 90, unlocked: true },
     signs: [
-      { x: 245, y: 535, text: 'Madeira flutua como ponte; Ferro afunda até a placa (50 kg)' },
+      { x: 245, y: 535, text: 'Pule para a passarela no meio da água e alcance a outra margem!' },
       { x: 1235, y: 535, text: 'Lance a Esfera Elástica pela fenda para ativar a placa' },
     ],
   },
